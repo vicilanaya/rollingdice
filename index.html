@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-	<meta name="description" content="Digital dice for RPGs, role playing games">
+	<meta name="description" content="Digital dice for RPGs (role playing games) - D&D, Pathfinder">
 	<meta name="author" content="Florence Vicil Anaya - Developer - vicilanaya@gmail.com">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>The Rolling Dice</title>
     
-<!--    <link rel="stylesheet" href="normalize.css">-->
+    <link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="dice.css">
 	
 <!--
@@ -27,66 +27,64 @@
     </header>
     
     <main>
-        <p>Tap or click a figure to roll the die.<br>
-        <input type="button" id="roll-all" name="roll-all" value="Roll All Dice"></p>
+        <p>Tap or click a figure to roll the die or <input type="button" id="roll-all" name="roll-all" value="Roll All Dice"></p>   
         
         <div id="flex-container-dice">
             <section>
-                <h3>D20<br>Icosahedron</h3>
+                <h3>D20</h3>
                 <div class="n">00</div>
                 <div id="d20">
-                    <a href=""><img id="icosahedron" src="svg/noun_icosahedron_407537.svg" alt="icosahedron" title="Roll Icosahedron"></a>
+                    <a href=""><img id="d20-icosahedron" src="svg/d20-icosahedron.svg" alt="D20 Icosahedron" title="Roll D20"></a>
                 </div>
             </section>
 
             <section>
-                <h3>D12<br>Dodecahedron</h3>
+                <h3>D12</h3>
                 <div class="n">00</div>
                 <div id="d12">
-                    <a href=""><img id="dodecahedron" src="svg/noun_dodecahedron_407535.svg" alt="dodecahedron" title="Roll Dodecahedron"></a>
+                    <a href=""><img id="d12-dodecahedron" src="svg/d12-dodecahedron.svg" alt="D12 Dodecahedron" title="Roll D12"></a>
                 </div>
             </section>
 
             <section>
-                <h3>D10<br>Pentagonal Trapezohedrons</h3>
+                <h3>D10<span>x</span>2</h3>
                 <div id="grid-container-d10">
-<!--                <div id="flex-container-d10">-->
                     <div id="d10-left">
                         <div class="n">00</div>
                         <div id="d10-1">
-                            <a href=""><img id="pentagonal" src="svg/noun_pentagonal_2784887.svg" alt="pentagonal" title="Roll Pentagonal Trapezohedron"></a>
+                            <a href=""><img id="d10-pentagonal" src="svg/d10-pentagonal-trapezohedron.svg" alt="D10 Pentagonal Trapezohedron" title="Roll D10 "></a>
                         </div>
                     </div>
                     <div id="d10-right">
-                        <div class="n">00</div>
+                        <div class="n">0</div>
                         <div id="d10-2">
-                            <a href=""><img id="pentagonal" src="svg/noun_pentagonal_2784887.svg" alt="pentagonal" title="Roll Pentagonal Trapezohedron"></a>
+                            <a href=""><img id="d10-pentagonal" src="svg/d10-pentagonal-trapezohedron.svg" alt="D10 Pentagonal Trapezohedron" title="Roll D10 "></a>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section>
-                <h3>D8<br>Octahedron</h3>
+                <h3>D8</h3>
                 <div class="n">00</div>
                 <div id="d8">
-                    <a href=""><img id="octahedron" src="svg/noun_octahedron_407539.svg" alt="octahedron" title="Roll Octahedron"></a>
+                    <a href=""><img id="d8-octahedron" src="svg/d8-octahedron.svg" alt="D8 Octahedron" title="Roll D8"></a>
                 </div>
             </section>
 
             <section>
-                <h3>D6<br>Cube</h3>
+                <h3>D6</h3>
                 <div class="n">00</div>
                 <div id="d6">
-                    <a href=""><img id="cube" src="svg/noun_cube_407538.svg" alt="cube" title="Roll Cube"></a>
+                    <a href=""><img id="d6-cube" src="svg/d6-cube.svg" alt="D6 Cube" title="Roll D6"></a>
                 </div>
             </section>
 
             <section>
-                <h3>D4<br>Tetrahedron</h3>
+                <h3>D4</h3>
                 <div class="n">00</div>
                 <div id="d4">
-                    <a href=""><img id="tetrahedron" src="svg/noun_tetrahedron_407587.svg" alt="tetrahedron" title="Roll Tetrahedron"></a>
+                    <a href=""><img id="d4-tetrahedron" src="svg/d4-tetrahedron.svg" alt="D4 Tetrahedron" title="Roll D4"></a>
                 </div>
             </section>
         </div>
