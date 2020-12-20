@@ -4,11 +4,11 @@
 
 "use strict";
 
-function runeCharacters(){
+function runeCharacters() {
     let runeArray = new Array(7);
     let runicCode;
     let rune;
-    for (let i = 0; i < runeArray.length; i++){
+    for (let i = 0; i < runeArray.length; i++) {
         // 5792-5872 (no 5873-5880)
         runicCode = Math.floor(Math.random() * (5872 - 5792 + 1) ) + 5792;
         // if runicCode is duplicate
@@ -70,38 +70,65 @@ function rollAll() {
     roll(4);
 }
 
-$(document).ready(function(){
+function animateSVG(clickedElement) {
+//    $(clickedElement).style.stroke = "rgb\(255, 0, 0\)\;";
+    let red = 255;
+    let strokeColor;
+    for (let i = red; i < 0; i--) {
+        // build stroke color 
+        strokeColor = "rgb\(" + red + ", 0, 0\)\;";
+        // change stroke color
+        $(clickedElement).style.stroke = strokeColor;
+    }
+}
+
+$(document).ready(function() {
     // initial roll display
     runeCharacters();
+    
+    // initial svg stroke color
+//    document.getElementsByTagName("svg").style.stroke = "black";
 
     // event for roll all dice button
     $("#roll-all").click(function(event) {
         rollAll();
         event.preventDefault();
     });
+
+    // event for reset all dice button
+    $("#reset-all").click(function(event) {
+        runeCharacters();
+        event.preventDefault();
+    });
     
     // events for individual dice
     $("#d20").click(function(event) {
+//        animateSVG(this);
         roll(20);
         event.preventDefault();
     });
     $("#d12").click(function(event) {
+//        animateSVG(this);
         roll(12);
         event.preventDefault();
     });
     $("#d10").click(function(event) {
+//        animateSVG(this);
         roll(10);
         event.preventDefault();
     });
     $("#d8").click(function(event) {
+//        animateSVG(this);
         roll(8);
         event.preventDefault();
     });
     $("#d6").click(function(event) {
+//        animateSVG(this);
         roll(6);
         event.preventDefault();
     });
     $("#d4").click(function(event) {
+//        animateSVG(this);
         roll(4);
         event.preventDefault();
     });
