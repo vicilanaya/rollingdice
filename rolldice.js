@@ -4,6 +4,34 @@
 
 "use strict";
 
+function runeCharacters(){
+    let runeArray = new Array(7);
+    let runicCode;
+    let rune;
+    for (let i = 0; i < runeArray.length; i++){
+        // 5792-5872 (no 5873-5880)
+        runicCode = Math.floor(Math.random() * (5872 - 5792 + 1) ) + 5792;
+        // if runicCode is duplicate
+        while (runeArray.includes("\&\#" + runicCode + "\;")) {
+            // redo random number
+            runicCode = Math.floor(Math.random() * (5872 - 5792 + 1) ) + 5792;
+        }
+        // complete HTML code
+        rune = "\&\#" + runicCode + "\;";
+        // add rune to array
+        runeArray[i] = rune;
+    }
+    // display initial roll characters
+    $("#d20roll").html(runeArray[0]);
+    $("#d12roll").html(runeArray[1]);
+    $("#d10roll1").html(runeArray[2]);
+    $("#d10roll2").html(runeArray[3]);
+    $("#d8roll").html(runeArray[4]);
+    $("#d6roll").html(runeArray[5]);
+    $("#d4roll").html(runeArray[6]);
+//    console.log("5792-5872: " + runeArray);
+}
+
 function roll(dmax) {
     // random number between 1 and dmax
     let randomNumber = 1 + Math.floor(Math.random() * dmax);
@@ -40,10 +68,11 @@ function rollAll() {
     roll(8);
     roll(6);
     roll(4);
-//    alert("roll all");
 }
 
 $(document).ready(function(){
+    // initial roll display
+    runeCharacters();
 
     // event for roll all dice button
     $("#roll-all").click(function(event) {
