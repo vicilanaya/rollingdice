@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-	<meta name="description" content="Digital dice for RPGs (role playing games) - D&D, Pathfinder">
+	<meta name="description" content="Digital dice for RPGs (role playing games) - Dungeons & Dragons, Call of Cthulhu, Pathfinder, Blades in the Dark, Warhammer, Deadlands, Cyberpunk Red, Paranoia, Shadow of the Demon Lord, Legend of the Five Rings, Star Wars">
 	<meta name="author" content="Florence Vicil Anaya - Developer - vicilanaya@gmail.com">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -15,6 +15,9 @@
     <link rel="shortcut icon" href="images/flag-guayama-favicon.gif" type="image/x-icon">
 	<link rel="icon" href="images/flag-guayama-favicon.gif" type="image/x-icon">
 -->    
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="rolldice.js"></script>
 	
 </head>
 	
@@ -32,66 +35,60 @@
         <div id="flex-container-dice">
             <section>
                 <h3>D20</h3>
-                <div class="n">00</div>
-                <div id="d20">
-                    <a href=""><img id="d20-icosahedron" src="svg/d20-icosahedron.svg" alt="D20 Icosahedron" title="Roll D20"></a>
-                </div>
+                <div id="d20roll" class="n">00</div>
+                    <a id="d20" href=""><img src="svg/d20-icosahedron.svg" alt="D20 Icosahedron" title="Roll D20"></a>
             </section>
 
             <section>
                 <h3>D12</h3>
-                <div class="n">00</div>
-                <div id="d12">
-                    <a href=""><img id="d12-dodecahedron" src="svg/d12-dodecahedron.svg" alt="D12 Dodecahedron" title="Roll D12"></a>
-                </div>
+                <div id="d12roll" class="n">00</div>
+                    <a id="d12" href=""><img src="svg/d12-dodecahedron.svg" alt="D12 Dodecahedron" title="Roll D12"></a>
             </section>
 
             <section>
-                <h3>D10<span>x</span>2</h3>
                 <div id="grid-container-d10">
-                    <div id="d10-left">
-                        <div class="n">00</div>
-                        <div id="d10-1">
-                            <a href=""><img id="d10-pentagonal" src="svg/d10-pentagonal-trapezohedron.svg" alt="D10 Pentagonal Trapezohedron" title="Roll D10 "></a>
-                        </div>
-                    </div>
-                    <div id="d10-right">
-                        <div class="n">0</div>
-                        <div id="d10-2">
-                            <a href=""><img id="d10-pentagonal" src="svg/d10-pentagonal-trapezohedron.svg" alt="D10 Pentagonal Trapezohedron" title="Roll D10 "></a>
-                        </div>
-                    </div>
+                    <h3 id="d10h3">D10<span>x</span>2</h3>
+                    <div id="d10roll1" class="n">00</div>
+                    <div id="d10roll2" class="n">0</div>
+                    <a id="d10" class="grid-container-d10-inside" href="">
+<!--                        <div id="d10-left">-->
+                            <img id="d10-left" src="svg/d10-pentagonal-trapezohedron.svg" alt="D10 Pentagonal Trapezohedron" title="Roll D10 ">
+<!--                        </div>-->
+<!--                        <div id="d10-right">-->
+                            <img id="d10-right" src="svg/d10-pentagonal-trapezohedron.svg" alt="D10 Pentagonal Trapezohedron" title="Roll D10 ">
+<!--                        </div>-->
+                    </a>
                 </div>
             </section>
 
             <section>
                 <h3>D8</h3>
-                <div class="n">00</div>
-                <div id="d8">
-                    <a href=""><img id="d8-octahedron" src="svg/d8-octahedron.svg" alt="D8 Octahedron" title="Roll D8"></a>
-                </div>
+                <div id="d8roll" class="n">00</div>
+                    <a id="d8" href=""><img src="svg/d8-octahedron.svg" alt="D8 Octahedron" title="Roll D8"></a>
             </section>
 
             <section>
                 <h3>D6</h3>
-                <div class="n">00</div>
-                <div id="d6">
-                    <a href=""><img id="d6-cube" src="svg/d6-cube.svg" alt="D6 Cube" title="Roll D6"></a>
-                </div>
+                <div id="d6roll" class="n">00</div>
+                    <a id="d6" href=""><img src="svg/d6-cube.svg" alt="D6 Cube" title="Roll D6"></a>
             </section>
 
             <section>
                 <h3>D4</h3>
-                <div class="n">00</div>
-                <div id="d4">
-                    <a href=""><img id="d4-tetrahedron" src="svg/d4-tetrahedron.svg" alt="D4 Tetrahedron" title="Roll D4"></a>
-                </div>
+                <div id="d4roll" class="n">00</div>
+                    <a id="d4" href=""><img src="svg/d4-tetrahedron.svg" alt="D4 Tetrahedron" title="Roll D4"></a>
             </section>
         </div>
     </main>
     
     <footer>        
         <p>Web Development: <a href="mailto:vicilanaya@gmail.com">vicilanaya@gmail.com</a></p>
+        
+        <p>Copyright &copy; 2020-<script>
+            var date = new Date();
+            var year = date.getFullYear();
+            document.write(year);</script> All Rights Reserved.</p>
+
         
 <!--
         <p>SVG credits:</p>
