@@ -98,6 +98,9 @@ span {
     color: red;
     font-family: monospace;
 }
+.smalltext {
+    font-size: small;
+}
 #wrapper {
     width: 70%;
 	margin-left: auto;

@@ -72,7 +72,7 @@ function rollAll() {
 
 $(document).ready(function(){
     // initial roll display
-//    runeCharacters();
+    runeCharacters();
 
     // event for roll all dice button
     $("#roll-all").click(function(event) {
