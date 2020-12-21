@@ -11,13 +11,27 @@ body {
     font-family: sans-serif;
     background-color: oldlace;
 }
+fieldset {
+    border: 3px solid gray;
+    border-radius: 12px;
+    margin: 1%;
+    padding: 0% 2% 0% 2%;
+/*    display: inline-flex;*/
+/*    flex-wrap: nowrap;*/
+}
 footer {
     font-size: xx-small;
     text-align: center;
 }
-h1 {
+form {
+    display: flex;
+}
+h1, h2 {
     text-shadow: 5px 5px 5px gray;
     font-family: monospace;
+}
+h2 {
+    margin-top: 5%;
 }
 h3 {
     margin-top: 5%;

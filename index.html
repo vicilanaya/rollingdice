@@ -41,7 +41,8 @@
     </header>
     
     <main>
-        <p>Tap or click a figure to roll the die, <input type="button" id="roll-all" name="roll-all" value="Roll All Dice"> or <input type="button" id="reset-all" name="reset-all" value="Reset All Dice">.<br><span class="smalltext">(Please use Chrome, Opera or Edge browsers.)</span></p>   
+        <p>Tap or click a figure to roll the die, <input type="button" id="roll-all" name="roll-all" value="Roll All Dice"> or <input type="button" id="reset-all" name="reset-all" value="Reset All Dice"> .<br><span class="smalltext">(Please use Chrome, Opera or Edge browsers.)</span></p>   
+        
         
         <div id="flex-container-dice">
             <section>
@@ -86,6 +87,67 @@
                 <a id="d4" href=""><img src="svg/d4-tetrahedron.svg" alt="D4 Tetrahedron" title="Roll D4"></a>
             </section>
         </div>
+        
+        
+        <h2>Settings</h2>
+        <span>UPCOMING FEATURES</span>
+
+        <form id="settings" name="settings" method="" action="">
+            <fieldset>
+                <legend>Color Animations</legend>
+                
+                <label>On <input type="radio" id="on" name="animation" value="true" checked disabled></label>
+                
+                <label>Off <input type="radio" id="off" name="animation" value="false" disabled></label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Choose Your Dice Color</legend>
+                
+                <input type="color" id="color" name="color" disabled>
+                
+                <input type="button" id="setcolor" name="setcolor" value="Use This Color" disabled>
+            </fieldset>
+
+<!--
+            <fieldset>
+                <legend>&#32;<input type="radio" id="presetcolor" name="setcolor" value="presetcolor" checked> Preset Dice Color</legend>
+                
+                <label>Black <input type="radio" id="preset-black" name="preset" value="black" checked></label>
+                
+                <label>Red <input type="radio" id="preset-red" name="preset" value="red"></label>
+                
+                <label>Blue <input type="radio" id="preset-blue" name="preset" value="blue"></label>
+                
+                <label>Green <input type="radio" id="preset-green" name="preset" value="green"></label>
+                
+                <label>Violet <input type="radio" id="preset-violet" name="preset" value="violet"></label>
+                
+                <label>Orange <input type="radio" id="preset-orange" name="preset" value="orange"></label>
+                
+                <label>Yellow <input type="radio" id="preset-yellow" name="preset" value="yellow"></label>
+            </fieldset>                
+-->
+
+<!--
+            <fieldset>
+                <legend>&#32;<input type="radio" id="customcolor" name="setcolor" value="customcolor"> Set Custom Dice Color</legend>
+                
+                <label>Hexadecimal: #<input type="text" id="hexadecimal" name="hexadecimal" maxlength="6" size="6" value=""></label>
+                <input type="button" id="" name="" value="Use This Color"><br>
+                
+                <label>RGB: 
+                    </label>
+                    red <input type="number" id="red-rgb" name="red-rgb" min="0" max="255">
+                    green <input type="number" id="green-rgb" name="green-rgb" min="0" max="255">
+                    blue <input type="number" id="blue-rgb" name="blue-rgb" min="0" max="255"></label>
+                <input type="button" id="" name="" value="Use This Color">
+            </fieldset>
+-->
+
+
+        </form>
+        
     </main>
     
     <footer>        
